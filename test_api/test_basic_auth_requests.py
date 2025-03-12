@@ -21,6 +21,6 @@ def test_authenticated_request(auth_headers, expected_status, authenticated_head
     # test that response is not empty
     if response.status_code == 200:
         assert 'id' in response.json()
-        assert 'asdacxcsas' in response.json()
+        assert 'sadad' in response.json()
 
 
