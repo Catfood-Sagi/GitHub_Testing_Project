@@ -2,7 +2,7 @@ import pytest
 import requests
 import os
 from fixtures.conftest import authenticated_headers
-from config import BASE_URL, GITHUB_PAT
+from config import BASE_URL
 
 # Authenticated request
 @pytest.mark.parametrize('auth_headers, expected_status', [
@@ -20,6 +20,6 @@ def test_authenticated_request(auth_headers, expected_status, authenticated_head
     # test that response is not empty
     if response.status_code == 200:
         assert 'id' in response.json()
-        assert 'aaaabb' in response.json()
+        assert 'aaaabbasd' in response.json()
 
 
