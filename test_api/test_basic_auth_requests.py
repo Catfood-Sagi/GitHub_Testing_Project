@@ -11,6 +11,7 @@ from config import BASE_URL, GITHUB_PAT
     (None, 401)
 ])
 
+# Basic Authenticated Request and type checking
 def test_authenticated_request(auth_headers, expected_status, authenticated_headers):
     """Test authenticated request"""
     headers = authenticated_headers if auth_headers == 'valid' else None
@@ -21,6 +22,6 @@ def test_authenticated_request(auth_headers, expected_status, authenticated_head
     # test that response is not empty
     if response.status_code == 200:
         assert 'id' in response.json()
-        assert 'sadad' in response.json()
+        assert isinstance(response.json()['id'], int)
 
 
