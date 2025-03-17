@@ -2,7 +2,7 @@ import pytest
 import json
 import requests
 from config import  BASE_URL, OWNER, REPO
-from fixtures.conftest import unauthenticated_headers
+from fixtures.conftest import unauthenticated_headers, revoked_token
 
 # Test that trying to reach the repo with invalid token results in 401.
 # as a side note, sending request without Authorization header will result in 200.
