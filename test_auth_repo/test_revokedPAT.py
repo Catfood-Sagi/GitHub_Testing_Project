@@ -9,7 +9,7 @@ from fixtures.conftest import revoked_token, resetting_repo
 def test_revoked_pat(revoked_token, resetting_repo):
 
     request_body = {
-        "description": "This is your first repository",
+        "description": "This is my first repository",
      }
     response = requests.patch(f'{BASE_URL}/repos/{OWNER}/{REPO}', headers=revoked_token, json=request_body)
     assert response.status_code == 401
