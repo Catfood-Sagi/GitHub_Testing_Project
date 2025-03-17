@@ -2,7 +2,7 @@ import pytest
 import requests
 import os
 from fixtures.conftest import authenticated_headers
-from config import BASE_URL, GITHUB_PAT
+from config import BASE_URL
 
 
 # Authenticated request
